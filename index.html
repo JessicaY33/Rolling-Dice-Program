@@ -1,0 +1,36 @@
+<!--Jessica You Period 9 & 10 10/2/23-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rolling Dice</title>
+    <script>
+    function Roll()
+    {
+        var num1 = rando(1,6);
+        var num2 = rando(1,6);
+        var total = num1 + num2;
+        const para = document.createElement("p");
+        const para1 = document.createElement("p");
+        const para2 = document.createElement("p");
+        para.textContent = "Dice 1: " + num1;
+        para1.textContent = "Dice 2: " + num2;
+        para2.textContent = "Total: " + total;
+        document.body.appendChild(para);
+        document.body.appendChild(para1);
+        document.body.appendChild(para2);
+    }
+
+    function rando(min, max)
+    {
+        var randomNum = Math.floor(Math.random()*(max + 1) + min); //Math.floor rounds the decimals into whole numbers
+        return randomNum;
+    }
+    </script>
+</head>
+<body>
+    <h1>Press the Button to Roll Two Dices!</h1>
+    <button onclick = "Roll()">Roll!</button>
+</body>
+</html>
