@@ -24,7 +24,7 @@
 
     function rando(min, max)
     {
-        var randomNum = Math.floor(Math.random()*(max + 1) + min); //Math.floor rounds the decimals into whole numbers
+        var randomNum = Math.floor(Math.random()*(max - min + 1) + min); //Math.floor rounds the decimals into whole numbers
         return randomNum;
     }
     </script>
